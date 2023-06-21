@@ -1,0 +1,109 @@
+#main_content{
+ 
+}
+#main_top{
+    display:flex; /*flex를 사용해서 화면에 두구역(왼쪽오른쪽)으로 나오게 됨.*/
+}
+
+.top_left{  /*실사용영역은 460px 500에서 패딩값 왼쪽오른쪽 20씩 차감한값임.*/
+    width:500px; /*너비를 주니 왼쪽으로 사진이 작아지고 오른쪽여백이 늘어남.*/
+    padding:20px;
+}
+.top_left img{ /*pc용을 제작할려면 %를 사용하지 않는게 좋음. 그래서 절대값을 주는게 좋음.
+    반응형을 만들땐 상대값을 해야한다.*/
+    width:460px;
+}
+.top_right{
+    width:500px;
+    padding:20px; /*왼쪽과 오른쪽 여백을 .top_left와 같게 줌. */
+    display:flex; /*태그의 해당부분이 한줄로나오게됨.*/
+    flex-direction: column; /*디스플레이 플렉스부분을 여러줄나올수있게 변형해주는거*/
+    justify-content:space-between; /*글의 위아래부분에 여백을 주는아이*/
+}
+.item_title{
+    padding-bottom:30px;
+    border-bottom:1px solid gray;
+}
+.item_price{
+    flex-grow:1; /*플렉스 그로우를 주면 한영역을 가지니 글씨가 자동적으로 올라감.*/
+/*이 영역 안에서 움직이는거라 패딩의 수치값으로 조절한다.*/
+    padding-top:30px; /*패딩으로만 넣었을땐 위아래 수치도 줄어들어 탑의위치만 변경하게 패딩탑으로 넣어야함*/
+    /*크기의 변화가없이 내영역에서 여백을 주고싶을때 패딩값으로 조절한다.*/
+}
+.item_button button:first-child{
+    border:1px solid green; /*박스의테두리부분 적용됨*/
+    color:black; /*글씨색적용됨*/
+    background:white; /*박스안쪽 색상적용됨*/
+    width:200px;
+    height:50px;
+}
+.item_button button:last-child{
+    background:green;
+    border:1px solid green;
+    color:white;
+    width:200px;
+    height:50px;
+}
+#main_content{
+    width:1080px;
+}
+.tab_title ul{
+    list-style-type: none;
+    width:100%;/*부모의 너비가 1080이라 너비 100%를 줌으로써 자식도 너비 1080의 너비를 가짐.*/
+    border-top:2px solid black;
+    border-left:1px solid gray;
+    border-bottom: 1px solid gray;
+}
+.tab_title ul li{
+    display:inline-block;
+    width:24.61%;
+    border-right:1px solid gray;
+    padding:15px 20px 14px 0;
+    text-align:center;
+}
+.tab_title ul li:first-child{ /* li의 첫번째 자식의 형태를 바꿔주는거
+     2번째 자식은 세컨드 3번째자식부터 nth사용한다.*/
+    margin-bottom:-2px;
+    border-bottom:1px solid white;
+}
+.detail_img{ /*이미지태그의 크기와 위치를 조정해줌.*/
+    width:780px;
+    margin:50px auto; /*이미지를 가운데로 주는 태그. 안될때는 너비를 안줘서 그렇다. 또한 img에 display:block가 있어야 적용됨.*/
+}
+#main_bottom{
+    margin-top:100px;
+    margin-bottom:100px;
+    width:1080px;
+    border-top:2px solid black;
+    padding-top:50px; /**/
+    position:relative;
+}
+
+#main_bottom h3{
+    font-size:25px;
+    margin:10px 0;
+}
+.review_guide{
+    margin-bottom:20px;
+}
+.star_rating{
+    width:304px;
+}
+.star_rating, .star_rating span{ /*가운데 , 는 두개를 같이 적용한다 띄어쓰기 꼭 쓰기*/
+    display:inline-block;
+    height:55px;
+    overflow:hidden;
+    background:url(../image/star.png);
+}
+.star_rating span{
+    background-position:left bottom; /*포지션은 위치를 정해주는거고 백그라운드는 배경이니 스타사진의왼쪽밑에있는 별부터 색칠한다라는 의미*/
+    line-height:0; /*스타이미지를 보면 두개의 별 그림사이의 간격이있는데 이 간격을 없애주기 위해 라인하이트를 제로로 넣어줌*/
+    vertical-align:top; /*스판에 있는 이미지를 위로 올리기위해*/
+    width:30%; /*30%만큼만 표현하라의 의미로 너비를 준거임.*/
+}
+.guide_btn{
+    position:absolute; /*개체에서 따로 떨어져나오게 위치지정해줌.*/
+    top:60px; /*상품평 운영원칙의 위치를 h3에있는 상품평의 위치까지 갈려면 main bottom에 지정되어있는 높이들을 확인후 지정해준것.*/
+    right:0px; /*좌표적는거*/
+    color:blue;
+}

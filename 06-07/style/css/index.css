@@ -1,0 +1,130 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+#wrap{
+    width:100%;
+    position:relative;
+}
+
+#header{
+    width:100%;
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    height:94px;
+    align-items:center;
+}
+
+.top_image{
+    width:225px;
+    height:37px;
+}
+
+.top_image a{
+    background:url(../image/logo.png);
+    height:100%;
+    display:block;
+    width:100%;
+}
+
+.header_menu{
+    flex-grow:1;
+}
+
+ul{list-style: none;}
+
+.menu_list{
+    display:flex;
+    height:100%;
+    justify-content:flex-end;
+    position:relative;
+
+}
+.menu_list>li{ /*바로 밑에있는 자식에게만 적용하겠다는  ">" 띄어쓰기로 주면 그밑에 밑에까지 다적용*/
+    position:relative; /*자식의 태그를 적용해주기위해 부모의 태그도 적용해줘야한다.*/
+    padding:20px 30px;
+    font-size:20px;
+}
+.menu_list>li>ul{
+    position:absolute;
+    top:20px; /*위치를 어디로 할지 정해줄려고 이렇게 넣음  위치의 속성태그를 사용할수있음.*/
+    height:0;
+    width:0;
+    opacity:0;/*투명도설정태그*/
+
+}
+.menu_list>li>ul>li{
+    position:relative;
+    line-height:0;
+
+}
+.menu_list>li:hover ul{
+    opacity:1; /*마우스롤 메뉴에 올렷을때 글씨가 표시되게 하라고 0에서 1수치를 줌.*/
+    width:100%; /*너비를 줫기때문에 옆으로 퍼짐*/
+    left:0;
+    top:67px; /*대신 position:relative로 해도 부모밑에서부터 위치하게된다. 만약 부모가 영향을 받아서 움직이게되면 top에 수치를 주는 방법을 해야함.*/
+}
+.menu_list>li:hover ul>li{
+    line-height:1; /*라인하이트는 한줄의 간격을 준거임*/
+    padding:10px 0;
+    text-align:center;
+    font-size: 16px;    
+}
+#section{
+    width:1200px;
+    margin:0 auto;
+}
+#img1{
+    width:100px;
+}
+#img1 img{
+    width:100%;
+    transition:all ease 1s; /*ease는 점점 빨라지는걸 표현한 태그 애니메이션의 속도효과를 적용시킨거*/
+}
+#img1 img:hover{
+    transform: rotate(720deg); /*회전관련 태그"deg"각도를 의미 양수는 시계방향 음수는 반시계방향으로 돌아간다. X축과 Y축을 따로 수치지정할수있다.
+    ex) rotate "x"(45) */
+
+}
+#move_box{
+    width:100px;
+    height:100px;
+    background:yellow;
+    transtion: all 1s;
+}
+#move_box:hover{ /*마우스 올리면 동작하는 속성을 줄때 hover*/
+    /* transform:translate(50px, 50px); /*translate-이동하는태그*/
+    /* transform:translateX(100px);x축으로 100px움직이라는뜻.*/
+    transform:translate3d(50px, 100px, 30px); /*3d는 수치를 x, y, z값을 줘야한다.*/
+} /*음수로 좌표를(50px) 줄때는 왼쪽으로 움직인다.*/
+
+#zoom_box{ /*확대축소의 애니메이션줄때*/
+    width:100px;
+    height:100px;
+    transition: all 1s; /*all */
+    background:greenyellow;
+    border-right:3px solid black;
+}
+#zoom_box:hover{
+    transform:scale(-2); /*확대하며 ()사이의 수치는 배수로 커짐*/
+}
+#skew_box{
+    width:100px;
+    height:200px;
+    background:blue;
+    transition:all 1s;
+}
+#skew_box:hover{
+    transform:skew(45deg, 20deg);
+}
+#matrix_box{
+    width:100px;
+    height:100px;
+    background:red;
+}
+#matrix_box:hover{
+    transform:matrix(2.1, 1.4, -2.1, 1.4,0,0);
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script src="./static/js/func8.js"></script>
+</head>
+<body>
+    <!-- 배열
+    문제
+국어,수학,영어,점수 input을 입력받기
+입력받은 점수에 각 과목마다 등급 출력하기.
+세과목의 평균에도 등급 출력하기
+100~90이면 A 89~80 B 79~70 C 나머지는 F
+출력내용은 알아서-->
+
+<div>
+    <div>
+        <label>국어</label>
+        <input type="number" id="kor">
+    </div>
+    <div>
+        <label>수학</label>
+        <input type="number" id="mat">
+    </div>
+    <div>
+        <label>영어</label>
+        <input type="number" id="eng">
+    </div>
+    <button onclick="score()">총점/등급</button>
+    <div id="score_sum"></div>
+</div>
+    
+</body>
+</html>

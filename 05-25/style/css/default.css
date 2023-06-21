@@ -1,0 +1,46 @@
+body{
+    /*body에 여백을 제거하여 화면에 꽉채워서 사용하려고 합니다.*/
+    padding:0;
+    margin:0;
+    background-color:darkgrey;
+    color:darkslategray;
+    position:relative;
+}
+#wrap{
+    position:relative;
+    width:100%;
+
+}
+#header{
+    width:900px;
+    margin:0 auto;
+    background-color:antiquewhite;
+    position:relative;
+    /* overflow:hidden; */
+    position:relative;
+    display:flex; /*플렉스는 부모에게 설정해야한다. 화면에 한줄로 나열시켜주는 속성*/
+    padding:20px 0;
+    font-size:25px;
+    justify-content:space-around;
+}
+/* #header div{
+   padding:20px 40px;
+    float:left;*/
+#section{
+    width:500px;
+    margin:0 auto;
+    display:flex;
+    
+}
+.sa_l{
+    width:80%;
+    height:400px;
+    background:violet;
+}
+.sa_r{
+    width:20%;
+    height:400px;
+    background:pink;
+}
+
+

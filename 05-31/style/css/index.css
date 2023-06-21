@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2? family= IBM+Plex+Sans+KR & display=swap');
+
+*, *:before, *:after{
+    box-sizing:border-box;/*"*"모두를 의미함.*/
+}
+
+body, h1,h2,h3,h4,h5,h6, p, ul, ol, li, dl,dd{
+    margin:0;
+    padding:0;
+}
+img{
+    max-width:100%;
+    display:block;
+}
+a{
+    text-decoration: none;/*텍스트의 데코를 없앤다.*/
+    color:inherit; /*상속이란 뜻. a태그의 색이 부모의 색을 가져온다.*/
+}
+
+#wrap{
+    max-width:1080px;
+    width:90%;
+    margin:0 auto;
+}
+#header{
+    display:flex;/*이미지와 메뉴가 한줄로나오게할때 사용*/
+    justify-content: space-between;
+    padding:7px 20px;
+    border-bottom:1px solid gray;
+    position:sticky; /*스크롤 내렸을때 상단바 고정
+                     링크 걸어논 모든 화면 적용 top:0 필수.*/
+    top:0;
+    background:white;
+}
+.header-logo{
+    width:150px;
+}
+.header-nav{
+    display:flex;
+    align-items:center;
+    font-size:25px;
+    
+}
+.header-nav a{
+    margin-left:30px; /*헤더네비의 남은여백이 있지않아 에이태그밑에 따로 속성값널어줘야한다*/
+}
+.header-nav a:nth-child(2){ /*부모태그에서 자식번호넣는거임 a태그중에서 두번째다 라는 말*/
+    display:flex;
+    align-items:center;
+    padding:7px 17px;
+    color:white;
+    background:skyblue;
+    border-radius:7px; /*테두리 굴곡넣어주는 태그*/
+
+}
+.header-nav a:nth-child(2) i{
+    padding-left:5px; /*카트와 아이콘사이의 여백을 주고싶을때*/
+}
+
+#main{
+
+    position:15px 0;
+}
+
+#flex{
+ display:flex;
+ flex-wrap:wrap; /*총너비에서 자식태그에 맞게 배치해주는 것.*/
+ justify-content:center;/*화면크기를 줄엿을때 센터로 위치하게해주는것*/
+ column-gap:20px;/*세로여백주는속성*/
+ row-gap:20px;/*가로여백주는속성*/
+}
+.flexitem{
+    border:1px solid gray;
+    max-width:300px;
+    width:30%;
+    overflow:hidden;/*사진의 여백을 가려주는 속성*/
+    border-radius:10px;
+    
+}
+.product-content{
+    display:flex;
+    justify-content:space-between;
+    padding:7px;
+}
+.product-content .like{
+    align-self: flex-end;
+}
+.product-info{
+    font-size:13px;
+}
+@media screen and (max-width:768px){ /*너비가 768px이하 라면이라는 뜻*/
+#flex{
+    column-gap:15px; /*너비가 768px이하이면 플랙스의 갭이 15px로 변화해라*/
+}
+.flexitem{
+    width:40%; /*창에 두개만 나오게 하고싶을때 100/3=33.333.. 33%보단 크고 50%보단 작게(50%는 1개의크기라 생각하면됨 그래서 초과수치를 적어야함.)*/
+} 
+@media screen and(max-width:576px){
+    .flexitem{
+        width:60%;
+    }
+}
+    }
+
+ 
+/*사용방식
+@media 조건{
+    스타일 속성:속성값;}
+@media 키워드 논리연산자(조건){ }
+키워드 - all, screen, print, tv, tty, projection등
+논리연산자 - and, or,
+and - 양쪽 조건이 모두 참 인 경우에 참. 절대값이라고 생각.
+or - 한쪽의 조건만 참이면 참. 상대값
+ex) 
+@media all and(max-width:800px){ }
+ - 미디어태그가 모든 화면의 너비가 800이하일때 적용된다.
+@media all or(max-width:800px){ }
+ - 미디어태그의 화면너비가
+ 조건 - max-width(이하), min-width(이상)
+    세로모드 :orientation:portrait
+    가로모드 :orientation:landscape
+    너비와 높이의 비율
+     aspect-ratio:6/4 ->너비가 6 높이가 4라는 뜻. 6:4비율의미.
+    색상 비트수(색상 표현 정도)
+     color:8 ->색상이 8비트 라면 256가지를 표현할수있음. 2의8승
+     - 이거는 조건영역에 입력하는거임.
+
+ ! 참고 : 반응형 제작할때 두가지 방법으로 제작한다.
+  1. 모바일 환경에서 pc환경으로 제작. 모바일환경에서 pc형으로 작업하는게 더 간편한 일이다.
+    min(을 주로 사용)
+
+  2. pc환경에서 모바일 환경으로 제작.
+   max를 주로 사용  
+
+
+  */
+
+

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        /*
+        // 바이킹 탑승 조건 키 150 이상
+        var tall = parseInt(prompt("나의 키는")+"<br>")
+        var result = (tall >= 150)?"탑승가능" : "탑승불가";
+        document.write(result);
+        // tall >= 150 이라는 조건식이 참이라면 ? 뒤에 값이 result에 저장
+        //거짓이라면 : 뒤에 값이 result에 저장해서 표시된다. */
+
+       // var eyes = 1.2;
+        //내시력이 1.0이상이면 좋은 눈을 가지고 있군요 라고 출력
+        //내시력이 1.0미만이면 검사를 받아보는게... 라고 출력
+
+        /*
+        var eyes = parseInt(prompt("내 시력은 "))
+        var result = (1.0 <= eyes)? "좋은 눈을 가지고 있군요" : "검사를 받아보시는게....";
+        document.write(result); */
+        /*
+        var time = 128; //128분을 의미한다라고가정...
+        var cost = 1000; //기본요금 1000원이라는 가정..
+        result = (time >120 )? cost+1000 :cost; //120분이상인경우 추가요금이 천원일경우 cost(기본요금)+1000원
+        document.write("물품보관료 : " + result) */
+    
+        /*문제.
+        주차장 기본요금이 1000원이다.
+        1시간 지나면 500원 추가요금있다.
+        2시간 지나면 1000원 추가요금 있다. ex)2시간 10분일경우 = 2500원
+        주차시간을 분으로 입력하여 주차요금 얼마를 지불해야 하는가 출력 */
+
+        // var time =  parseInt(prompt("주차시간 "));
+        // var cost = 1000;
+        // var price = (time >60 ) ? cost+500 : cost;
+        //     price = (time > 120) ? price+1000 : price;
+        // document.write("주차요금 : "+ price+"<br>");
+        // //var price = (time >120 ) ? cost + 1500 : (time >60) ? cost+500 :cost;
+
+        //동전 앞면 뒷면 맞추기
+        // 출력 방법 2
+     // alert("나는 알림창 :)"); //alert ->알림창띄우는거.
+     // var num = Math.random()*10; // 0.1234 에서 1.1234 로 앞에 정수가들어감.
+    // var num = parseInt.random()*10; // 소수점뒤에자리빼고 앞의 정수만 표현해줌.
+    //math.floor() - 내림 하면서 주어진 숫자보다 작거나 같은 정수 값 반환.
+    // var num = Math.floor(Math.random()*10); // 0~9 난수를 표현하는거
+    // var num = Math.floor(Math.random()*10)+1; // 1~10 난수를 표현하는거
+    // var num = Math.floor(Math.random()*5)+1; // 1~5의 난수를 표현.
+      // 즉 내가 하고자하는 랜덤범위의 최소값을 더하기에 넣고 곱하기는 최대값에서 최소값빼고 +1 = 곱하기값나옴.
+      // ex) 10~20 사이의 값을 얻고싶을때 20-10+1 = 11
+    //alert(num);
+
+        // var coin = Math.floor(Math.random()*2);
+        // var choice = parseInt(prompt("0. 앞면 , 1. 뒷면"));
+      
+        // //document.write( (coin==choice) ?"정답이다.":"다시던지세요" );
+        // // 동전의 앞면과 뒷면 을 맞추려면 랜덤으로 나온값과  내가 입력한 값이 일치하면 
+        // // 맞춘거  일치하지않은면 못맞춘 거
+        // var result = ( coin == choice) ? "정답" : "삐!! 다시";
+        // document.write( result);
+        
+        //주사위를 던졌다.(기본 주사위)
+        //주사위의 값이 5보다 크면 승리라고 출력하고 아니면 패배라고 출력
+    // var dice = Math.floor(Math.random()*6)+1;
+    // var result = (dice >5) ? "승리" : "패배";
+    // //var result = (dice==6) ? "승리" :"패배";
+    // document.write(result);
+
+    //두개의 주사위를 던졌다.
+    //두개 주사위의 합이 9보다 크면 승리, 아니면 패배 출력
+
+    // var dice1 = Math.floor(Math.random()*6)+1;
+    // var dice2 = Math.floor(Math.random()*6)+1;
+    // var result = (dice1+dice2 >9) ? "승리" : "패배"; // var sum = dice1+dice2; =>더하기하고싶을때 sum함수 사용해도된다.
+    // document.write(result);
+
+//     var dice1 = Math.floor(Math.random() * 6) +1;
+//     var dice2 = Math.floor(Math.random() * 6 ) +1;
+//     var sum = dice1+dice2; // 두개 주사위합
+//     var result = ( sum > 9) ? "승리":"패배";
+//      document.write("주사위합은 : <b style='font-size:30px;'>"+sum+"</b> <br> "+result);
+
+//조건연산자
+//(조건식) ? 참일경우 값 : 거짓일 경우 값 ;
+
+//오늘의 과제 :
+//주사위 문제
+//주사위 2개를 던진다.
+//주사위의 합이 7이상이면 승리, 아니면 패배
+//단, 주사위 2개의 숫자가 모두 같은 숫자라면 승리.
+// 주사위 2개가 1,1,1 나왔다면 승리, 2,2,2 나와도 승리.
+
+// var dice1 = Math.floor(Math.random()*6)+1;
+// var dice2 = Math.floor(Math.random()*6)+1;
+// var sum = dice1+dice2;
+// var result = (sum > 7) ? "승리" : "패배"; //result -결과라는 뜻
+// var mech = (dice1==dice2) ? "승리" : result ;
+// document.write(mech);
+
+// -------선생님 코딩 -------------------------------------------------------------
+// var dice1 = Math.floor(Math.random() * 6)+1;
+// var dice2 = Math.floor(Math.random() * 6)+1;
+//  document.write("주사위1 : <b class='red_txt'>"+dice1+"</b>  주사위2 : <b>"+dice2+"</b><br>");
+// var res = ( (dice1+dice2) >=7 )? "승리" : "패배";
+//  res = (dice1 == dice2) ? "승리" : res;
+// document.write("결과 : " + res);
+//--------------------------------------------------------------------------------
+
+//문제 2
+//가위바위보 하기
+//컴퓨터와 가위바위보 게임하기
+//1.가위 2.바위 3.보
+//컴퓨터 랜덤값으로 1~3중에 나오는 값과 내가 입력한 값 비교하여
+//내가 이겼는지 비겼는지 패배 하였는지 출력하기.
+
+var com = Math.floor(Math.random()*3)+1;
+var user = parseInt(prompt("1.가위 2.바위 3.보")); // 내가 이길수있는 값이 몇개인지, 같은거를 냈을때의 조건만 만듬.
+//컴퓨터와 내가 내는 숫자를 뺏을때 나오는 수치 1,-2 비겻을때 0
+var calc=user-com;
+var res=(calc==0) ? "비김" : (calc==1 || calc==-2) ? "이김" :"패배";
+document.write("나는"+res)
+
+
+
+
+    </script>
+<style>
+    .red_txt{color:red;}
+</style>
+
+</head>
+<body>
+    
+</body>
+</html>

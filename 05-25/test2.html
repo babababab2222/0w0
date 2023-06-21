@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>x테이블 마지막</title>
+        <style>
+            #box{
+                border-collapse:collapse;}
+            .top, .bottom{
+               width:100px;
+               height:200px;
+               border:1px solid black;
+            }
+            .left, .right{
+                width:200px;
+                height:100px;
+                border:1px solid black;
+            }
+
+            .top:hover{
+                background:pink;
+
+            }
+            .left:hover{
+                background:yellow;
+            }
+            .rightmemo{
+                display:none;
+            }
+            .right:hover .rightmemo{
+                display:block;
+                background:burlywood;
+            }
+            .brother2{opacity:0;}
+            .brother1:hover ~ .brother2{
+                opacity:1;
+            }
+
+        </style>
+</head>
+<body>
+    
+    <table id="box">
+        <tr>
+            <td></td>
+            <td class="top"></td>
+            <td></td>
+        </tr>
+        <tr >
+            <td class="left"></td>
+            <td></td>
+            <td class="right">
+                <p class="rightmemo">
+                    나는 오른쪽입니다, 오른쪽은 오른손잡이가 밥먹을때
+                    수저를 사용하는 손 쪽입니다.
+                </p>
+
+            </d>
+        </tr>
+        <tr >
+            <td></td>
+            <td class="bottom">
+
+                <h3 class="brother1">여기에 마우스 놓아줘</h3>
+                <h5 class="brother2">
+                    그냉
+                </h5>
+            </td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>

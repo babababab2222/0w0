@@ -1,0 +1,152 @@
+body,ul,p,h1,h1,h2,h3,h4,h5{
+    padding:0;
+    margin:0;
+}
+#wrap{
+    width:100%;
+    position:relative;
+    top:0;
+    left:0;
+    
+}
+#header, #section_wrap, #footer{
+    width:100%;
+    max-width:1200px;
+    min-width:800px;
+    margin:0 auto;
+    position:relative;
+}
+#header{
+    display:flex;
+    background:skyblue;
+    align-items:center;
+    padding:10px 0;
+}
+.logo{width:140px;}
+.logo img{width:100%}
+.menu{
+    width: calc( 100% - 140px );
+}
+.menu ul{
+    font-size:25px;
+    list-style-type:none;
+    display:flex;
+    justify-content:space-around;
+    
+}
+#section_wrap{
+    display:flex;
+    flex-direction: column;
+}
+#section_top{
+    order:1;
+    display:flex;
+}
+#section_bottom{
+    order:2;
+}
+.slider {
+    width:400px;
+}
+.slider img{
+    width:100%;
+    
+}
+.gallery{
+    width:500px;
+    padding:10px;
+    box-sizing:border-box;
+}
+.gallery_Box{
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    row-gap:10px;
+   
+}
+.thumbnail{
+    width:30%;
+    height:100px;
+    overflow:hidden;
+}
+.thumbnail img{
+    width:100%;
+}
+.popularSearch{
+    flex-grow:1;
+    background:burlywood;
+}
+#section_bottom{
+    order:2;
+    display:flex;
+}
+ul{
+    list-style-type:none;
+}
+.latest_post{
+    padding:20px;
+    box-sizing:border-box;
+    width:25%;
+    background:beige;
+}
+.latest_post .latest{
+    cursor:pointer;
+    padding:5px 0;
+}
+
+.popular_post{
+    padding:20px;
+    box-sizing:border-box;
+    width:25%;
+    background:bisque;
+}
+.popular_post .popular_list{
+    cursor:pointer;
+    padding:5px 0;
+}
+.social{
+    flex-grow:1;
+    font-size:40px;
+    align-items:center;
+    display:flex;
+    background:bisque;
+    justify-content:space-evenly;
+}
+@font-face{
+    src:url('https://www.axis-praxis.org/fonts/webfonts/MetaVariableDemo-Set.woff2');
+    font-family:'Meta';
+    font-style:normal;
+    font-weight:normal;
+}
+.banner{
+    flex-grow:1;
+    box-sizing:border-box;
+    justify-content:space-evenly;
+    display:flex;
+    align-items:center;
+    background:beige;
+}
+.banner main{
+    font-size:60px;
+    font-family: 'meta', sans-serif;
+    color:transparent;
+    text-align:center;
+    font-variation-settings:'wght' 900, 'ital' 1;
+    -webkit-text-stroke:4px rgb(105, 105, 249);
+    transition:all 1.5s;
+    text-shadow:5px 5px 0px rgb(15, 2, 252),/*그림자효과..수평거리 수직거리 흐림정도 색을 넣어야한다.*/
+    8px 8px 0px yellow,11px 11px 0px rgb(89, 221, 251), 14px 14px 0px rebeccapurple,34px 34px 10px rgb(30, 10, 49)
+}
+.banner main:hover{
+    font-variation-settings: 'wght' 100, 'ital' 0;
+    text-shadow:none;
+}
+#footer div{
+    align-self: flex-end;
+   
+}
+#footer{
+    display:flex;
+    justify-content:space-between;
+}
