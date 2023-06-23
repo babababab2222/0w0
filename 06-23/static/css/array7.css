@@ -1,0 +1,68 @@
+*{box-sizing:border-box;} /* *{}모든 태그에 보더박스 적용하라*/
+
+body, ul, p, h1, h2, h3, h4, h5,
+ol, dl{
+    padding:0;
+    margin:0;
+}
+ul{
+    list-style-type: none;
+}
+#wrap{
+    width:85%;
+    min-width:500px;
+    max-width:1000px;
+    margin:50px auto; /*가운데로와라..?*/
+
+}
+.line{
+    border-bottom:2px solid #aaa;
+}
+#menu{
+    display:flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.menu_bt{
+    border-radius: 50px;
+    font-weight: 900; /*글씨 굵기 글씨색바꾸고싶을땐 color로 바꾸면됨.*/
+    font-size: 25px;
+    display: inline-block;
+    padding: 10px 20px;
+    background: gold;
+    text-shadow: 0px 0px 2px yellow; /*그림자효과 준거*/
+}
+.menu_icon{
+    display:none; /*화면에 안뜨게함.*/
+    position: relative;
+}
+.strapIcon{
+    font-size:40px;
+    cursor:pointer;
+
+}
+/*
+.strapIcon:active ~ .menu_list{ 스트랩아이콘 ~ 형제표시.
+    display: block; 클릭했을때 나타나게 해줌.(.menu_list)그전에 디스플레이 논을 해줘야함.
+} */
+.menu_list{
+    display:none; /*클릭하기전까지 내역을 가려주기위해.*/
+    position: absolute; /*위치의 기준점이 바뀌어서 부모에게만 영향줌.다른녀석에게 영향받지않음.*/
+    background: whitesmoke;
+    width:100%;
+}
+@media screen and (max-width:786px){/*최대크기가 786픽셀 작으면*/
+/*몇@보다 이하일때 움직이게하는거
+이하 : max-width
+이상 : min-width
+웹 제작을 pc우선으로 제작시 max-width
+모바일 우선으로 제작시 min-width*/
+#menu{display:block; /*기본 플렉스로 되어있는걸 이부분만 블럭으로 풀어줘서 나머지 여백을 다사용할수있게*/
+    position:relative;
+}
+.menu_icon{ /*크기를 줄였을때 아이콘과함께 메뉴리스트뜸.*/
+    display:block;
+}
+.menu_bt{display:none;}
+/*크기를 줄였을때 대표메뉴가 사라짐.*/
+}

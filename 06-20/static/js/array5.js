@@ -7,10 +7,10 @@ let step=0; //클릭횟수 제한을 위한 변수.
 
 let num = new Array(); // 화면에 표시되는 숫자 저장 배열 
 let board=new Array();  //  숫자가 출력될 위치 저장 배열
-
+//length는 배열과 문자열에 사용하는거임.!
 function init(){ //초기화
     //중복없이 랜덤값 넣기
-    //indexOf를 이용해서 -1이 나오면 일치하는게 없다ㅏ.
+    //indexOf를 이용해서 -1이 나오면 일치하는게 없다. indexof는 배열안에 있는 위치를 찾는거임. 없는 수치는 -1을 써준다.
     //  즉 중복되는 숫자가 없다는 뜻이니까  배열에저장
     num.push(Math.floor(Math.random()*10)+1 );
     for(var i=1; i<=3; i++){
@@ -53,7 +53,7 @@ function play(){
     for( var i=0; i<pic.length; i++){
          pic[board[i]].innerHTML = num[i%4]  ;
      }
-
+//setTimeout함수는 setTimeout(실행할 함수 , 시간); 이렇게 사용해야한다.
     setTimeout( function(){  // settimeout = 지정한 시간이후에 실행되는 함수.
         let pic = document.getElementsByClassName("back");
         for(var i=0; i<pic.length; i++){
